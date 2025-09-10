@@ -1,0 +1,16 @@
+// function to set text color, takes in bg color variable and checks its lightness
+// if it is greater than 50, it returns a color value of black, else white.
+@function set-text-color($color) {
+  @if(lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Transform mixin
+@mixin transform($property) {
+  --webkit-transform: $property;
+  --ms-transform: $property;
+  transform: $property;
+}
